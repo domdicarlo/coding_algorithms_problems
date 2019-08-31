@@ -109,7 +109,5 @@ def n_steps_gen_iter(n, set_x):
     buff[i] += sum(buff[i - x] for x in set_x if i - x > 0)
   return buff[-1]
 
-base_set = [1, 2]
 
-print(n_steps_gen_iter(0, base_set))
 
