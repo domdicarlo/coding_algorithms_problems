@@ -43,7 +43,7 @@ def n_steps_basic_iter(n):
   # f(n) = f(n-2) + f(n-1)
   else:
     buff = [1, 1, 1]
-    for x in range (n - 1):
+    for x in range(n - 1):
       buff[2] = buff[0] + buff[1]
       buff[0] = buff[1]
       buff[1] = buff[2]
