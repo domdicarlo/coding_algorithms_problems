@@ -1,5 +1,6 @@
 #!/bin/python3
 
+import os
 from collections import defaultdict
 
 # From the problem, here: https://www.hackerrank.com/challenges/frequency-queries/problem
