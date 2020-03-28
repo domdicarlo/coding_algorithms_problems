@@ -19,6 +19,15 @@
 # of the subtraction, we look through our memoization matrix and see what the
 # smallest number of squared integers for that value was.
 
+# Time Analysis: At worst we will have to compute n squaring operations
+#                per int (altho we will actually have to do something like half
+#                that number). We have to do this a total of n times
+#                (this is seen in the code with the two for loops). So we have
+#                O(n^2) ops if we consider the multiplication to be of unit cost.
+
+# Space Analysis: We will have to keep the full memo matrix all the way through,
+#                 so the space complexity is simply O(n)                  
+
 def findSizeOfSum(n: int):
     memo_mat = [0 for i in range(0, n + 1)] # set the number to 0 for int 0
     for i in range(1, n + 1):
@@ -36,4 +45,4 @@ print("Sum size for 13: " + str(findSizeOfSum(13)))
 print("Sum size for 0: " + str(findSizeOfSum(0)))
 print("Sum size for 1: " + str(findSizeOfSum(1)))
 print("Sum size for 100: " + str(findSizeOfSum(100)))
-print("Sum size for 1,000,000,000: " + str(findSizeOfSum(1000000000)))
+print("Sum size for 10,000: " + str(findSizeOfSum(10000)))
